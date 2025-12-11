@@ -29,10 +29,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Головна</a>
+                            <a class="nav-link" href="index.html">Головна</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cart.html">Кошик</a>
+                            <a class="nav-link active" href="cart.html">Кошик</a>
                         </li>
 
                     </ul>
@@ -61,18 +61,60 @@
         </nav>
     </header>
     <main>
-        <section class="banner">
-            <h1 class="fade-in-text ">Oнлайн-магазин парфумів</h1>
-            <h3></h3>
-
-        </section>
-        <section class="container products py-5" id="products">
-            <h3 class="">Товари в наявності</h3>
-            <div class="container-cards products-list">
-
-            </div>
-        </section>
-
+        <section class="cart py-4">
+      <h2>Ваш кошик</h2>
+      <div class="cart-items-list">
+        У кошику ще немає товарів
+      </div>
+      <div class="margin-y">
+        Сума замовлення: <span class="cart-total">0</span> грн.
+      </div>
+      <button  id="orderBtn" class="cart-btn margin-y">Оформити замовлення</button>
+    </section>
+    <section class="order">
+      <h2>Оформлення замовлення</h2>
+      <form class="order-form" action="" method="post">
+        <div class="form-group mt-3">
+          <label for="firstName">Ім'я:</label>
+          <input class="form-control" type="text" id="firstName" name="firstName" required>
+        </div>
+  
+        <div class="form-group mt-3">
+          <label for="lastName">Прізвище:</label>
+          <input class="form-control" type="text" id="lastName" name="lastName" required>
+        </div>
+  
+        <div class="form-group mt-3">
+          <label for="email">Електронна пошта:</label>
+          <input class="form-control" type="email" id="email" name="email" required>
+        </div>
+  
+        <div class="form-group mt-3">
+          <label for="phone">Номер телефону:</label>
+          <input class="form-control" type="tel" id="phone" name="phone" required>
+        </div>
+  
+        <div class="form-group mt-3">
+          <label for="deliveryMethod">Спосіб доставки:</label>
+          <select class="form-select" id="deliveryMethod" name="deliveryMethod" required>
+            <option value="standard">Нова пошта</option>
+            <option value="express">Укрпошта</option>
+          </select>
+        </div>
+  
+        <div class="form-group mt-3">
+          <label for="address">Адреса доставки:</label>
+          <input class="form-control" type="text" id="address" name="address"  required>
+        </div>
+  
+        <div class="form-group mt-3">
+          <label for="comment">Коментар:</label>
+          <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
+        </div>
+        <button  type="submit" class="cart-btn margin-y">Підтвердити</button>
+  
+      </form>
+    </section>
     </main>
     <footer class="container">
         <div class="social-links">

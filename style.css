@@ -10,3 +10,162 @@ body {
     background-color: #f9f2e8;
     color: #1f1104;
 }
+
+.logo {
+    width: 80px;
+    border-radius: 10px;
+}
+
+.custom-nav {
+    background-color: #d9cec2;
+}
+
+.btn-custom {
+    background-color: #f9f2e8;
+    border: 1px solid #1f1104;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn-custom:hover {
+    background-color: #1f1104;
+    color: #f9f2e8;
+}
+
+.cart-btn {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(to left, #a79c90,#d9cec2);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+    margin-top: 10px;
+}
+.cart-btn:hover {
+    background: linear-gradient(to left,#968d83,#b9b0a5);
+}
+
+.cart-btn:active {
+    transform: scale(0.97);
+    transition-duration: .2s;
+}
+.cart-btn div {
+    position: relative;
+}
+
+.cart-counter {
+    background: #fff;
+    font-size: small;
+    color:#968d83;
+    border-radius: 100px;
+    padding: 0 .2em;
+    position: absolute;
+    /* Змініть позицію на абсолютну */
+    top: 0;
+    /* Відступ зверху */
+    right: 0;
+    /* Відступ справа */
+}
+.banner {
+    width: 100%;
+    height: 90vh;
+    background: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+
+.banner h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cart-items-list{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20;
+}
+
+.cart-item{
+    border: 1px solid rgb(83, 83, 83);
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-page{
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.margin-y{
+    margin: 30px 0;
+}
+
+
+.order{
+    width: 100%;
+    padding: 20px;
+    display: none;
+    opacity: 0;
+}
+.cart{
+    width: 100%;
+    transition-duration: .2s;
+    opacity: 0;
+}
+
+.order-form h1 {
+    text-align: center;
+}
+
+.order-form .form-group {
+    margin-bottom: 20px;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cart-item-quantity input{
+    width: 100px;
+}
+
+@media (max-width: 720px) {
+    .cart-page{
+        flex-wrap: wrap;
+    }
+}
