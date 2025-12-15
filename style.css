@@ -169,3 +169,67 @@ footer{
         flex-wrap: wrap;
     }
 }
+.my-card {
+    padding: 28px;
+    background: transparent;
+    transition: background .2s linear;
+    border-radius: 10px;
+    max-width: 350px;
+}
+
+.my-card:hover {
+    background: #DCE5E2;
+    cursor: pointer;
+    transition: background .2s linear;
+    color: #272727;
+}
+
+.light-theme .my-card:hover {
+    background: #ffffff;
+
+}
+
+.text-my-card {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.description-card {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+    font-size: 0.7rem;
+}
+
+.price-card {
+    font-size: 1rem;
+    line-height: 1rem;
+    /* 120% */
+    color:#1f1104;
+    font-weight: 600;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.my-card img {
+    width: 244px;
+    height: 214px;
+    object-fit: contain;
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116); */
+}
+
+.container-cards {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: flex-start;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 72px;
+}
