@@ -2,66 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Тут ви знайдете круті парфуми за доступними цінами">
-    <meta name="keywords" content="парфуми люкс ніша мас-маркет">
-    <meta name="author" content="Оля">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Тут ви знайдете круті парфуми за доступними цінами">
+  <meta name="keywords" content="парфуми люкс ніша мас-маркет">
+  <meta name="author" content="Оля">
 
-    <title>AromaLuxe</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>AromaLuxe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
-    <header class="fixed">
+  <header class="fixed">
 
-        <nav class="navbar navbar-expand-lg custom-nav">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="" srcset="" class="logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Головна</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="cart.html">Кошик</a>
-                        </li>
+    <nav class="navbar navbar-expand-lg custom-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="" srcset="" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="cart.html">Кошик</a>
+            </li>
 
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search" />
-                        <button class="btn btn-custom" type="submit">Шукати</button>
-                    </form>
-                    <button class="cart-btn" id="cartBtn">
-                        Кошик
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bell" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                            <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                            <path d="M17 17h-11v-14h-2" />
-                            <path d="M6 5l14 1l-1 7h-13" />
-                        </svg>
-                        <span class="cart-counter">0</span>
-                        </li>
-                    </button>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search" />
+            <button class="btn btn-custom" type="submit">Шукати</button>
+          </form>
+          <button class="cart-btn" id="cartBtn">
+            Кошик
+            <svg xmlns="http://www.w3.org/2000/svg" class="bell" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M17 17h-11v-14h-2" />
+              <path d="M6 5l14 1l-1 7h-13" />
+            </svg>
+            <span class="cart-counter">0</span>
+            </li>
+          </button>
 
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="cart py-4">
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="cart py-4">
       <h2>Ваш кошик</h2>
       <div class="cart-items-list">
         У кошику ще немає товарів
@@ -69,7 +68,7 @@
       <div class="margin-y">
         Сума замовлення: <span class="cart-total">0</span> грн.
       </div>
-      <button  id="orderBtn" class="cart-btn margin-y">Оформити замовлення</button>
+      <button id="orderBtn" class="cart-btn margin-y">Оформити замовлення</button>
     </section>
     <section class="order">
       <h2>Оформлення замовлення</h2>
@@ -78,22 +77,22 @@
           <label for="firstName">Ім'я:</label>
           <input class="form-control" type="text" id="firstName" name="firstName" required>
         </div>
-  
+
         <div class="form-group mt-3">
           <label for="lastName">Прізвище:</label>
           <input class="form-control" type="text" id="lastName" name="lastName" required>
         </div>
-  
+
         <div class="form-group mt-3">
           <label for="email">Електронна пошта:</label>
           <input class="form-control" type="email" id="email" name="email" required>
         </div>
-  
+
         <div class="form-group mt-3">
           <label for="phone">Номер телефону:</label>
           <input class="form-control" type="tel" id="phone" name="phone" required>
         </div>
-  
+
         <div class="form-group mt-3">
           <label for="deliveryMethod">Спосіб доставки:</label>
           <select class="form-select" id="deliveryMethod" name="deliveryMethod" required>
@@ -101,35 +100,38 @@
             <option value="express">Укрпошта</option>
           </select>
         </div>
-  
+
         <div class="form-group mt-3">
           <label for="address">Адреса доставки:</label>
-          <input class="form-control" type="text" id="address" name="address"  required>
+          <input class="form-control" type="text" id="address" name="address" required>
         </div>
-  
+
         <div class="form-group mt-3">
           <label for="comment">Коментар:</label>
           <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
         </div>
-        <button  type="submit" class="cart-btn margin-y">Підтвердити</button>
-  
+        <button type="submit" class="cart-btn margin-y">Підтвердити</button>
+
       </form>
     </section>
-    </main>
-    <footer class="container">
-        <div class="social-links">
-            <a href="https://www.instagram.com/aromaluxe_uk/?igsh=MWtxaDMxNml5azNkdQ%3D%3D#"><img src="images/instagram.png"></a>
-        </div>
-        <div class="contact-info">
-            <p>Проект створений: Саванчук Оля</p>
-            <p>2025</p>
-        </div>
-    </footer>
+  </main>
+  <footer class="container">
+    <div class="social-links">
+      <a href="https://www.instagram.com/aromaluxe_uk/?igsh=MWtxaDMxNml5azNkdQ%3D%3D#"><img
+          src="images/instagram.png"></a>
+    </div>
+    <div class="contact-info">
+      <p>Проект створений: Саванчук Оля</p>
+      <p>2025</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js'></script>
 
 </body>
 
