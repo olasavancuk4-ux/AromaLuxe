@@ -16,16 +16,26 @@ function getCookieValue(cookieName) {
     // Якщо кукі з вказаним іменем не знайдено, повертаємо порожній рядок або можна повернути null
     return ''
 }
+
+// Функція для отримання списку товарів з JSON-файлу
+// використовуємо async/await для асинхронного завантаження даних 
+// бо fetch повертає проміс, який потрібно дочекатися
 async function getProducts() {
     let response = await fetch("store_db.json")
     let products = await response.json()
     return products
 }
 
+// асинхронне завантаження та відображення товарів на сторінці 
 getProducts().then(function (products) {
+    
+    // Відображаємо товари на сторінці
     let productsList = document.querySelector('.products-list')
+    // Перевіряємо, чи існує елемент productsList
     if (productsList) {
+        // проходимося по всіх товарах і додаємо їх HTML-код до списку
         products.forEach(function (product) {
+            // Додаємо HTML-код картки товару до списку
             productsList.innerHTML += getCardHTML(product)
         })
     }
@@ -37,8 +47,9 @@ getProducts().then(function (products) {
             button.addEventListener('click', addToCart);
         });
     }
-
 })
+
+// Функція для створення HTML-коду для однієї картки товару
 function getCardHTML(product) {
     return `<div class="my-card" style="">
             <img src="images/${product.image}">
@@ -51,7 +62,10 @@ function getCardHTML(product) {
         </div>`
 }
 
+// Клас для керування кошиком товарів
+// збереження у кукі та завантаження з кукі
 class ShoppingCart {
+    // створюємо об'єкт кошика та завантажуємо дані з кукі якщо вони є в конструкторі
     constructor() {
         this.items = {} // об’єкт з товарами у кошику
         this.cartCounter = document.querySelector('.cart-counter')
@@ -59,6 +73,7 @@ class ShoppingCart {
         this.cartElement = document.querySelector('#cart-items')
     }
 
+    // метод для додавання товару до кошика
     addItem(item) { // Додавання товару до кошика 
         if (this.items[item.title]) {
             // Якщо товар вже є, збільшуємо його кількість на одиницю
@@ -83,15 +98,17 @@ class ShoppingCart {
         }
     }
 
-
+    // метод для збереження кошика у кукі
     saveCartToCookies() { // збереження кошика у кукі
         let cartJSON = JSON.stringify(this.items)
         document.cookie = `cart=${cartJSON}; max-age=${60 * 60 * 24 * 7}; path=/`
 
     }
 
+    // метод для завантаження кошика з кукі
     loadCartFromCookies() { // Завантаження кошика з кукі
         let cartCookie = getCookieValue('cart')
+        // Якщо кукі існує, завантажуємо дані у кошик
         if (cartCookie && cartCookie !== '') {
             this.items = JSON.parse(cartCookie)
             this.updateCounter()
@@ -107,6 +124,7 @@ class ShoppingCart {
         this.cartCounter.innerHTML = count; // оновлюємо лічильник на сторінці
     }
 
+    // метод для обчислення загальної вартості замовлення
     calculateTotal() {
         let total = 0  // загальна вартість замовлення
         for (let key in this.items) {
@@ -115,7 +133,11 @@ class ShoppingCart {
         return total
     }
 }
-let cart = new ShoppingCart() // Створення об'єкта кошика
+
+// Створення об'єкта кошика для майбутнього використання
+let cart = new ShoppingCart()
+
+// Функція для обробки кліку на кнопку "Купити"
 function addToCart(event) {
     // Отримуємо дані про товар з data-атрибута кнопки
     const productData = event.target.getAttribute('data-product')

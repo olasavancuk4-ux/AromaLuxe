@@ -34,12 +34,7 @@
             <li class="nav-item">
               <a class="nav-link active" href="cart.html">Кошик</a>
             </li>
-
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search" />
-            <button class="btn btn-custom" type="submit">Шукати</button>
-          </form>
           <button class="cart-btn" id="cartBtn">
             Кошик
             <svg xmlns="http://www.w3.org/2000/svg" class="bell" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -59,7 +54,7 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main class="container margin-top">
     <section class="cart py-4">
       <h2>Ваш кошик</h2>
       <div class="cart-items-list">
@@ -72,7 +67,7 @@
     </section>
     <section class="order">
       <h2>Оформлення замовлення</h2>
-      <form class="order-form" action="" method="post">
+      <form class="order-form" id="order-form" action="" method="post">
         <div class="form-group mt-3">
           <label for="firstName">Ім'я:</label>
           <input class="form-control" type="text" id="firstName" name="firstName" required>
